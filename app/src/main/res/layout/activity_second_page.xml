@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Second_Page">
+
+    <!--drawer-->
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/navigation_drawer" />
+
+    <RelativeLayout
+        android:id="@+id/layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--        Video Player-->
+        <RelativeLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:background="#03A9F4"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/drower_btn"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:onClick="openCloseNavigationDrawer"
+                android:src="@drawable/drower_btn"
+                tools:ignore="OnClick" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/drower_btn"
+                app:cardCornerRadius="@dimen/_10sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#03A9F4">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:text="Video Player"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/l2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/l1"
+            android:layout_centerHorizontal="true">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/folder_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp">
+
+                <Button
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_height="match_parent"
+                    android:text="Folder"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Video_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@id/folder_btn"
+                app:cardCornerRadius="20dp">
+
+                <Button
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_height="wrap_content"
+                    android:text="Video"
+                    android:textSize="@dimen/_14sdp" />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/l2"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:cardCornerRadius="@dimen/_5sdp">
+
+            <RelativeLayout
+                android:id="@+id/whatsapp_video_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#CADFDD">
+
+
+                <ImageView
+                    android:id="@+id/inbox_btn"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/inbox_btn" />
+
+                <TextView
+                    android:id="@+id/whatsapp_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_toEndOf="@+id/inbox_btn"
+                    android:text="Whatsapp Video"
+                    android:textColor="#128C7E"
+                    android:textSize="@dimen/_16sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/whatsapp_video"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_toEndOf="@+id/inbox_btn"
+                    android:text="(32)"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

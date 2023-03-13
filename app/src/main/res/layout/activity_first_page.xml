@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".First_Page">
+
+    <RelativeLayout
+        android:id="@+id/rv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#8BC34A"
+            app:cardCornerRadius="@dimen/_30sdp">
+
+            <Button
+                android:id="@+id/Video_Player_btn"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:backgroundTint="#4CAF50"
+                android:text="Video Player"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp" />
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rv_1"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/more_btn_img"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:src="@drawable/more_btn" />
+
+        <ImageView
+            android:id="@+id/rate_btn_img"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_toEndOf="@id/more_btn_img"
+            android:src="@drawable/rate_btn" />
+
+        <ImageView
+            android:id="@+id/share_btn_img"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_toEndOf="@id/rate_btn_img"
+            android:src="@drawable/share_btn" />
+
+
+    </RelativeLayout>
+</RelativeLayout>
